@@ -1,0 +1,47 @@
+{
+  "name": "@mailkite/mcp",
+  "version": "0.13.0",
+  "description": "Model Context Protocol server for MailKite — exposes the MailKite API to LLM agents as tools. A thin layer over the MailKite Node SDK and the shared sdks/spec contract.",
+  "mcpName": "dev.mailkite/mailkite",
+  "type": "module",
+  "bin": {
+    "mailkite-mcp": "server.mjs"
+  },
+  "files": [
+    "server.mjs",
+    "spec",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepack": "node prepack.mjs",
+    "postpack": "node -e \"require('node:fs').rmSync('spec',{recursive:true,force:true})\"",
+    "docs": "node gen-readme-tools.mjs",
+    "test": "node gen-readme-tools.mjs --check && node smoke.mjs && node wire-test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mailkite",
+    "mcp",
+    "model-context-protocol",
+    "email",
+    "ai",
+    "agent",
+    "tools"
+  ],
+  "homepage": "https://mailkite.dev/docs/libraries",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mailkite/mailkite-mcp.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "ajv": "^8.17.1",
+    "mailkite": "file:../node"
+  }
+}
