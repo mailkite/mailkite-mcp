@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "dev.mailkite/agent-mail",
+  "description": "Give an AI agent its own inbox — receive email as a webhook, send over a verified domain.",
+  "repository": {
+    "url": "https://github.com/mailkite/mailkite-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://mailkite.dev/docs/ai-agents",
+  "version": "0.12.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.mailkite.dev/mcp?ref=agent-mail"
+    }
+  ]
+}
