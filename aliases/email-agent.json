@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "dev.mailkite/email-agent",
+  "description": "Email for AI agents — send, receive as a webhook, manage domains, templates, routing.",
+  "repository": {
+    "url": "https://github.com/mailkite/mailkite-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://mailkite.dev/docs/ai-agents",
+  "version": "0.12.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.mailkite.dev/mcp?ref=email-agent"
+    }
+  ]
+}
