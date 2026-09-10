@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "dev.mailkite/mailkite",
+  "description": "Send email, manage domains, DNS, webhooks, templates, and inbound routing on MailKite",
+  "repository": {
+    "url": "https://github.com/mailkite/mailkite-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://mailkite.dev/docs/ai-agents",
+  "version": "0.13.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@mailkite/mcp",
+      "version": "0.13.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "MAILKITE_API_KEY",
+          "description": "MailKite API key (mk_live_…) from the dashboard at https://app.mailkite.dev",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.mailkite.dev/mcp"
+    }
+  ]
+}
